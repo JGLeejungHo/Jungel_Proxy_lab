@@ -20,4 +20,3 @@ cgi:
 clean:
 	rm -f *.o tiny *~
 	(cd cgi-bin; make clean)
-

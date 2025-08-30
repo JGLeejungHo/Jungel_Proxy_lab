@@ -36,3 +36,11 @@ Files:
   cgi-bin/adder.c	CGI program that adds two numbers
   cgi-bin/Makefile	Makefile for adder.c
 
+// tiny 파일 실행시키는방법
+// gcc -o tiny tiny.c csapp.c -lpthread 컴파일
+// ./tiny 8000
+// curl http://localhost:8000/home.html  다른터미널에 치기
+
+// adder.c 실행방법
+// ./tiny 8000 //서버먼저실행
+// curl -v "http://localhost:8000/cgi-bin/adder?a=숫자&b=숫자" // 치고 Ctrl 누르고 사이트클릭 (숫자 = 아무숫자나 넣을것)
