@@ -43,8 +43,8 @@ cd echo 파일 먼저들어가기
 rm -f echoserveri.pid
 
 //echoserveri가 없다면 echo.o가 이미 있으니 echo.o + csapp.o를 링크하여 echoserveri를 만듭니다:
-gcc -O0 -Wall -I . -g -o echoserveri echo.o csapp.o -lpthread
 (만약 echo.o가 없으면 gcc -O0 -Wall -I . -g -c echo.c 먼저 실행하세요)
+gcc -O0 -Wall -I . -g -o echoserveri echo.o csapp.o -lpthread
 
 //실행파일 확인 / 실행
 ls -l echoserveri
@@ -58,10 +58,9 @@ ss -ltnp | grep ':8000'
 
 // echoclient가 있으면:
 
-./echoclient localhost 8000
+./echoclient localhost 8000     // 실행후 터미널에 아무거나 치기
 
-// 실행후 터미널에 아무거나 치기
-
+// telnet localhost 8000        //telnet 접속 서버를 켜야 들어갈수있음
 //아니면 또는 netcat으로 간단 테스트
 echo "hello world" | nc localhost 8000
 //위에꺼 안하고 이걸치면 hello world 출력이됨
